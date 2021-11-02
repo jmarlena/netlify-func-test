@@ -1,4 +1,9 @@
 const winston = require('winston');
+const defaultLevels = winston.createLogger({
+  level: 'silly',
+  format: winston.format.simple(),
+  transports: new winston.transports.Console()
+});
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const handler = async (event) => {
   try {
