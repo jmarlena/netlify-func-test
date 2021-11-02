@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/aws/aws-lambda-go/events"
-	"github.com/aws/aws-lambda-go/lambda"
 	"log"
 	"net/http"
+
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 
-	fmt.Println("INFO INFO INFO")
-	log.Println("LOG PRINTLN")
+	fmt.Println("fmt.Println log line")
+	log.Println("log.Println log line")
 	return &events.APIGatewayProxyResponse{
 		StatusCode:        200,
 		Headers:           map[string]string{"Content-Type": "text/plain"},
