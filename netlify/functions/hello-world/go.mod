@@ -1,4 +1,4 @@
-module github.com/someone/hello-world
+module github.com/shanesaww/hello-world
 
 go 1.15
 
