@@ -9,14 +9,11 @@ const logger = winston.createLogger({
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const handler = async (event) => {
   try {
-    
-    logger.debug("I am a debug winstonlog.");
-    logger.info("I am an info winstonlog.");
-    logger.warn("I am a warn winstonlog with a json object:", { foo: "bar" });
-    logger.error("I am an error winstonlog.");
+    // logger.info("I am an info winstonlog.");
+    // logger.warn("I am a warn winstonlog with a json object:", { foo: "bar" });
+    // logger.error("I am an error winstonlog.");
 
     
-    // npmlog.debug("I am a debug log.");
     npmlog.info("I am an info npmlog.");
     npmlog.warn("I am a warn npmlog with a json object:", { foo: "bar" });
     npmlog.error("I am an error npmlog.");
