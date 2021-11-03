@@ -14,7 +14,6 @@ const handler = async (event) => {
     logger.info("I am an info winstonlog.");
     logger.warn("I am a warn winstonlog with a json object:", { foo: "bar" });
     logger.error("I am an error winstonlog.");
-    logger.end();
 
     
     // npmlog.debug("I am a debug log.");
