@@ -17,7 +17,8 @@ const handler = async (event) => {
     npmlog.info("I am an info npmlog.");
     npmlog.warn("I am a warn npmlog with a json object:", { foo: "bar" });
     npmlog.error("I am an error npmlog.");
-
+    npmlog.stream = process.stdout
+    npmlog.info("I am an info npmlog to stdout.");
     loglevel.enableAll()
     loglevel.debug("I am a debug loglevel.");
     loglevel.info("I am an info loglevel.");
