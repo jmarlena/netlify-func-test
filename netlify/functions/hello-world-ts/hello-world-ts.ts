@@ -7,6 +7,7 @@ export const handler: Handler = async (event, context) => {
 
   console.log("type-script console log")
   console.error("type-script console error log")
+  console.log("type-script console log after error")
   log.silly("I am a silly tslog.");
   log.debug("I am a debug tslog.");
   log.info("I am an info tslog.");
