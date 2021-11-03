@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "loglevel": "^1.7.1",
+    "npmlog": "^5.0.1",
     "tslog": "^3.2.2",
     "winston": "^3.3.3"
   }
