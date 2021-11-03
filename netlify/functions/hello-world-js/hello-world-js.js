@@ -1,19 +1,17 @@
 const winston = require('winston');
-const defaultLevels = winston.createLogger({
-  level: 'silly',
+const logger = winston.createLogger({
   format: winston.format.simple(),
   transports: new winston.transports.Console()
 });
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const handler = async (event) => {
   try {
-    function logAllLevels() {
-      Object.keys(winston.config.npm.levels).forEach(level => {
-        defaultLevels[level](`is logged when logger.level="${defaultLevels.level}"`);
-      });
-    }
-    
-    logAllLevels();
+    logger.silly("I am a silly log.");
+    logger.debug("I am a debug log.");
+    logger.info("I am an info log.");
+    logger.warn("I am a warn log with a json object:", { foo: "bar" });
+    logger.error("I am an error log.");
+
     const subject = event.queryStringParameters.name || 'World'
     console.log("console log line")
     console.error("console error log line")
