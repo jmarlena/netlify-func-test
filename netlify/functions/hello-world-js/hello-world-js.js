@@ -1,3 +1,11 @@
+exports.handler = async () => {
+  const mySecret = process.env.MY_SECRET;
+  return {
+    statusCode: 200,
+    body: `hello world! I have a ${mySecret}`,
+  };
+};
+
 const winston = require('winston');
 var npmlog = require('npmlog')
 var loglevel = require('loglevel');
@@ -38,5 +46,6 @@ const handler = async (event) => {
     return { statusCode: 500, body: error.toString() }
   }
 }
+
 
 module.exports = { handler }
